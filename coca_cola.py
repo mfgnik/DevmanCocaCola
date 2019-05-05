@@ -19,7 +19,7 @@ def day_before_today(number_of_day):
 
 def get_amount_of_mentions(number_of_day):
     print(day_before_today(number_of_day))
-    service_key = "e6dadafde6dadafde6dadafd33e6b098c7ee6dae6dadafdba1f82d540311b83ab8b8498"
+    service_key = getenv("SERVICE_KEY")
     response = requests.get('https://api.vk.com/method/newsfeed.search', params={
     'v': 5.95,
     'access_token': service_key,
